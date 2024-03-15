@@ -40,7 +40,7 @@ func NewParser(cfgs ...Config) (*ETHParser, error) {
 	for _, cfg := range cfgs {
 		err := cfg(conf)
 		if err != nil {
-
+			return nil, err
 		}
 	}
 	return conf, nil
